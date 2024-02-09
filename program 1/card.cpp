@@ -16,9 +16,9 @@ Card::Card(char r, char s){
 void Card::display(){
 
 	if (rank == 'T'){
-		cout << "Displayed Card: " << "10" << suit;		
+		cout << "10" << suit;		
 	}else{
-		cout << "Displayed Card: " << rank << suit;
+		cout << rank << suit;
 	}
 
 }

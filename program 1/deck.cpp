@@ -9,8 +9,8 @@
 #include "card.h"
 using namespace std;
 Deck::Deck(){
-	suits = {'C','S','D','H'};
-	ranks = {'1', '2', '3', '4', '5', '6', '7', '8', '9', 'T'};
+	suits = {'C', 'S','D','H'};
+	ranks = {'A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K'};
 	for (int i = 0; i < suits.size(); i++){
 		for (int j = 0; j < ranks.size(); j++){
 			myDeck.push_back(Card(ranks[j], suits[i]));	
@@ -18,8 +18,16 @@ Deck::Deck(){
 	};
 }
 void Deck::display(){
+	cout << "Original Deck: ";
+
 	for (int k=0; k < this->myDeck.size(); k++){
+		if (k % 13  ==  0){
+			cout << endl;
+		}
 		this->myDeck[k].display();
-		cout << endl;
+		if (k < this->myDeck.size() - 1){
+			cout << ", ";
+		}
 	};
+	cout << endl;
 }
