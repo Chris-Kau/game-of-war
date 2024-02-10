@@ -13,7 +13,7 @@ class Card
 	public:
 		Card(char rank, char suit);
 		void display();
-		int compare(Card other);
+		int compare(Card);
 
 };
 #endif
