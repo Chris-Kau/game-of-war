@@ -8,30 +8,38 @@
 #include "deck.h"
 #include "card.h"
 using namespace std;
-Deck::Deck(){
+Deck::Deck()
+{
 	suits = {'C', 'S','D','H'};
 	ranks = {'A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K'};
-	for (int i = 0; i < suits.size(); i++){
-		for (int j = 0; j < ranks.size(); j++){
+	for (int i = 0; i < suits.size(); i++)
+	{
+		for (int j = 0; j < ranks.size(); j++)
+		{
 			myDeck.push_back(Card(ranks[j], suits[i]));	
 		}
 	}
 }
-void Deck::display(){
-
-	for (int k=0; k < myDeck.size(); k++){
-		if (k % 13  ==  0){ 	//Makes a new line every 13 cards
+void Deck::display()
+{
+	for (int k=0; k < myDeck.size(); k++)
+	{
+		if (k % 13  ==  0)
+		{ 	//Makes a new line every 13 cards
 			cout << endl;
 		}
 		myDeck[k].display();	//prints out the card
-		if (k < myDeck.size() - 1){	//Gets rid of last comma
+		if (k < myDeck.size() - 1) //Gets rid of last comma
+
+		{	
 			cout << ", ";
 		}
 	};
 	cout << endl;
 }
 
-Card Deck::deal(){
+Card Deck::deal()
+{
 	Card card = myDeck.front();
 	myDeck.erase(myDeck.begin());
 	return card;
