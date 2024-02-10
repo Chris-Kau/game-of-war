@@ -18,5 +18,5 @@ int main(){
 	cout << ' ';
 	dckCard2.display();
 	cout << endl;
-	cout << dckCard.compare(dckCard2);
+	cout << dckCard.compare(dckCard2) << endl;
 }

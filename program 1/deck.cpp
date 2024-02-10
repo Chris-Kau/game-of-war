@@ -19,12 +19,12 @@ Deck::Deck(){
 }
 void Deck::display(){
 
-	for (int k=0; k < this->myDeck.size(); k++){
+	for (int k=0; k < myDeck.size(); k++){
 		if (k % 13  ==  0){ 	//Makes a new line every 13 cards
 			cout << endl;
 		}
-		this->myDeck[k].display();	//prints out the card
-		if (k < this->myDeck.size() - 1){	//Gets rid of last comma
+		myDeck[k].display();	//prints out the card
+		if (k < myDeck.size() - 1){	//Gets rid of last comma
 			cout << ", ";
 		}
 	};
@@ -32,7 +32,7 @@ void Deck::display(){
 }
 
 Card Deck::deal(){
-	Card card = this->myDeck.front();
-	this->myDeck.erase(this->myDeck.begin());
+	Card card = myDeck.front();
+	myDeck.erase(myDeck.begin());
 	return card;
 }
