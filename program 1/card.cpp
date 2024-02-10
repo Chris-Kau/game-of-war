@@ -23,4 +23,32 @@ void Card::display(){
 
 }
 
-//Need to make int compare(Card) function
+int Card::compare(Card other){
+	int cardRank;
+	int otherRank;
+	if(rank == 'T'){
+		cardRank = 10;
+	}else if(rank == 'A'){
+		cardRank = 1;
+	}else{
+		cardRank = rank - '0'; //Converts the char into an integer
+	}
+
+	if(other.rank == 'T'){
+		otherRank = 10;
+	}else if(other.rank == 'A'){
+		otherRank = 1;
+	}else{
+		otherRank = other.rank - '0'; //Converts the char into an integer
+	}
+
+	if (cardRank > otherRank){
+		return 1;
+	}else if(cardRank < otherRank){
+		return -1;
+	}else{
+		return 0;
+	}
+
+}
+
