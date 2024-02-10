@@ -10,5 +10,13 @@ using namespace std;
 int main(){
 	Deck dck;
 	dck.display();
+	Card dckCard = dck.deal();
+	Card dckCard2 = dck.deal();
 	cout << endl;
+	cout << "DISPLAYED: ";
+	dckCard.display();
+	cout << ' ';
+	dckCard2.display();
+	cout << endl;
+	cout << dckCard.compare(dckCard2);
 }
