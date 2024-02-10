@@ -42,6 +42,7 @@ int main(){
 		p2card.display();
 		cout << endl;
 		int comparison = p1card.compare(p2card);
+		//Checks to see who wins
 		if (comparison == 1)
 		{
 			p1wins++;
@@ -60,6 +61,7 @@ int main(){
 		gameCount++;
 		cout << endl;
 	}
+	//turned to string so we can get length() for proper formatting
 	string p1winsString = to_string(p1wins);
 	string p1lossesString = to_string(p1losses);
 	string tiesString = to_string(ties);
