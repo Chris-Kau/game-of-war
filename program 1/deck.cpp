@@ -34,5 +34,5 @@ void Deck::display(){
 Card Deck::deal(){
 	Card card = this->myDeck.front();
 	this->myDeck.erase(this->myDeck.begin());
-	return cd;
+	return card;
 }
