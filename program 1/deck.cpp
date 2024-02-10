@@ -14,18 +14,17 @@ Deck::Deck(){
 	for (int i = 0; i < suits.size(); i++){
 		for (int j = 0; j < ranks.size(); j++){
 			myDeck.push_back(Card(ranks[j], suits[i]));	
-		};
-	};
+		}
+	}
 }
 void Deck::display(){
-	cout << "Original Deck: ";
 
 	for (int k=0; k < this->myDeck.size(); k++){
-		if (k % 13  ==  0){
+		if (k % 13  ==  0){ 	//Makes a new line every 13 cards
 			cout << endl;
 		}
-		this->myDeck[k].display();
-		if (k < this->myDeck.size() - 1){
+		this->myDeck[k].display();	//prints out the card
+		if (k < this->myDeck.size() - 1){	//Gets rid of last comma
 			cout << ", ";
 		}
 	};
