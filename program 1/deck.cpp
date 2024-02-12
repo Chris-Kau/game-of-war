@@ -7,7 +7,6 @@
 #include <string>
 #include "deck.h"
 #include "card.h"
-#include <algorithm>
 #include <random>
 using namespace std;
 Deck::Deck()
@@ -50,6 +49,8 @@ Card Deck::deal()
 void Deck::shuffle()
 {
 	srand(time(0)); //generates a random seed based off the number of seconds since 00:00 hours, Jan1, 1970 UTC.
-	int seed = rand(); //generates a random number based off the seed determined by srand
-	std::shuffle(myDeck.begin(), myDeck.end(), std::default_random_engine(seed));
+	for(int i = 0; i < myDeck.size();i++){
+		int seed = rand(); //generates a random number based off the seed determined by srand
+		swap(myDeck[i + (seed % (52 - i))], myDeck[i]); //swaps the index of random remaining cards/indexes
+	}
 }
