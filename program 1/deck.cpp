@@ -13,6 +13,7 @@ Deck::Deck()
 {
 	suits = {'C', 'S','D','H'};
 	ranks = {'A', '2', '3', '4', '5', '6', '7', '8', '9', 'T', 'J', 'Q', 'K'};
+	//Creates a vector (the deck) with Card objects
 	for (int i = 0; i < suits.size(); i++)
 	{
 		for (int j = 0; j < ranks.size(); j++)
@@ -41,6 +42,7 @@ void Deck::display()
 
 Card Deck::deal()
 {
+	//Removes a card from the deck and returns that removed card
 	Card card = myDeck.front();
 	myDeck.erase(myDeck.begin());
 	return card;
